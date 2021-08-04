@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Lato', sans-serif;
   background-color: #333;
   color: #222;
@@ -28,7 +28,7 @@ body{
 .circle-container {
   position: fixed;
   top: -100px;
-  left: -100px
+  left: -100px;
 }
 
 .circle {
@@ -37,10 +37,10 @@ body{
   width: 200px;
   border-radius: 50%;
   position: relative;
-  transition: transform 0.5 linear;
+  transition: transform 0.5s linear;
 }
 
-.container.show-nav .circle{
+.container.show-nav .circle {
   transform: rotate(-70deg);
 }
 
@@ -108,6 +108,17 @@ nav ul li + li {
 nav ul li + li + li {
   margin-left: 30px;
   transform: translateX(-200%);
+}
+
+nav a{
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #FF7979;
+  font-weight: bold;
 }
 
 .content img {
