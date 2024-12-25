@@ -7,7 +7,7 @@ let currentActive = 1;
 
 next.addEventListener('click', () => {
   currentActive++;
-  if(currentActive > circles.length) {
+  if (currentActive > circles.length) {
     currentActive = circles.length;
   }
   update();
@@ -15,15 +15,15 @@ next.addEventListener('click', () => {
 
 prev.addEventListener('click', () => {
   currentActive--;
-  if(currentActive < 1) {
+  if (currentActive < 1) {
     currentActive = 1;
   }
   update();
 });
 
-function update () {
+function update() {
   circles.forEach((circle, index) => {
-    if(index < currentActive) {
+    if (index < currentActive) {
       circle.classList.add('active');
     } else {
       circle.classList.remove('active');
@@ -36,7 +36,7 @@ function update () {
   if (currentActive === 1) {
     console.log('hi')
     prev.disabled = true;
-  } else if(currentActive === circles.length) {
+  } else if (currentActive === circles.length) {
     console.log('hii')
     next.disabled = true;
   } else {
