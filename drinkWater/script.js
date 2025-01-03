@@ -12,11 +12,11 @@ smallCups.forEach((cup, index) => {
 });
 
 function highlightCups(index) {
-  if(smallCups[index].classList.contains('full') && !smallCups[index].nextElementSibling.classList.contains('full')) {
+  if (smallCups[index].classList.contains('full') && !smallCups[index].nextElementSibling.classList.contains('full')) {
     index--;
   }
   smallCups.forEach((cup, index2) => {
-    if(index2 <= index) {
+    if (index2 <= index) {
       cup.classList.add('full');
     } else {
       cup.classList.remove('full');
@@ -28,7 +28,7 @@ function highlightCups(index) {
 function updateBigCup() {
   const fullCups = document.querySelectorAll('.cup-small.full').length;
   const totalCups = smallCups.length;
-  if(fullCups === 0) {
+  if (fullCups === 0) {
     percentage.style.visibility = 'hidden';
     percentage.style.height = 0;
   } else {
@@ -36,7 +36,7 @@ function updateBigCup() {
     percentage.style.height = `${fullCups / totalCups * 330}px`;
     percentage.innerText = `${fullCups / totalCups * 100}%`
   }
-  if(fullCups === totalCups) {
+  if (fullCups === totalCups) {
     remained.style.visibility = 'hidden';
     remained.style.height = 0;
   } else {
